@@ -1,0 +1,73 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+def javafxPlatform = org.gradle.internal.os.OperatingSystem.current().isWindows() ? 'win' : (org.gradle.internal.os.OperatingSystem.current().isMacOsX() ? 'mac' : 'linux')
+
+dependencies {
+    implementation project(':utilities')
+
+    // jMonkeyEngine
+    implementation 'org.jmonkeyengine:jme3-core:3.6.1-stable'
+    implementation 'org.jmonkeyengine:jme3-desktop:3.6.1-stable'
+    implementation 'org.jmonkeyengine:jme3-lwjgl:3.6.1-stable'
+    // JavaFX (platform-specific classifiers are required for JavaFX runtime jars)
+    implementation("org.openjfx:javafx-base:25.0.1:${javafxPlatform}") { transitive = false }
+    implementation("org.openjfx:javafx-graphics:25.0.1:${javafxPlatform}") { transitive = false }
+    implementation("org.openjfx:javafx-controls:25.0.1:${javafxPlatform}") { transitive = false }
+    implementation("org.openjfx:javafx-graphics:25.0.1:${javafxPlatform}") { transitive = false }
+    implementation("org.openjfx:javafx-fxml:25.0.1:${javafxPlatform}") { transitive = false }
+    implementation("org.openjfx:javafx-swing:25.0.1:${javafxPlatform}") { transitive = false }
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testImplementation 'org.junit.platform:junit-platform-launcher:1.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+def javafxModulePath = files(configurations.runtimeClasspath.filter { it.name.startsWith('javafx') && it.name.endsWith("-${javafxPlatform}.jar") }).asPath
+println "javafxModulePath: ${javafxModulePath}"
+
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs += [
+        '--module-path', javafxModulePath,
+        '--add-modules', 'javafx.controls,javafx.fxml'
+    ]
+    println "compileJava args: ${options.compilerArgs}"
+}
+
+run {
+    jvmArgs = [
+        '--module-path', javafxModulePath,
+        '--add-modules', 'javafx.controls,javafx.fxml',
+        '--add-exports', 'javafx.graphics/com.sun.javafx.scene=ALL-UNNAMED',
+        '--add-exports', 'javafx.graphics/com.sun.javafx.util=ALL-UNNAMED',
+        '--add-exports', 'javafx.graphics/com.sun.javafx.stage=ALL-UNNAMED',
+        '--add-exports', 'javafx.graphics/com.sun.javafx.geom=ALL-UNNAMED',
+        '--add-exports', 'javafx.graphics/com.sun.javafx.geom.transform=ALL-UNNAMED',
+        '--add-exports', 'javafx.graphics/com.sun.javafx.tk=ALL-UNNAMED',
+        '--add-exports', 'javafx.graphics/com.sun.glass.utils=ALL-UNNAMED',
+        '--add-opens', 'javafx.graphics/com.sun.glass.ui=ALL-UNNAMED',
+        '--add-exports', 'javafx.base/com.sun.javafx=ALL-UNNAMED',
+        '--add-opens', 'javafx.base/com.sun.javafx=ALL-UNNAMED',
+        '--enable-native-access=ALL-UNNAMED'
+    ]
+}
+
+application {
+    mainClass = 'org.example.app.MainApp'
+}
