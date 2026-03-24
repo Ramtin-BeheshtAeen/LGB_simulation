@@ -31,7 +31,8 @@ public class MainApp {
         //**!** */ 1. Start JavaFX toolkit first
         Platform.startup(() -> {});
         LaserGuidance3D app = new LaserGuidance3D(); // Start THIS class
-
+        
+        //javaFX Panel Setting
         AppSettings settings = new AppSettings(true);
         settings.setFrameRate(60);
         
@@ -40,6 +41,13 @@ public class MainApp {
         //createCanvas() + startCanvas() won't work with jme3-lwjgl3
         //app.createCanvas(); 
         //app.startCanvas();
+	
+	//-- Right Column: control Panel --------------------------------------
+	SimPanel panel = new SimPanel();
+	app.setPanel(panel);
+	panel.setBorder(new MatteBorder(0, 1, 0, 0, new color(45, 45, 58)));
+
+
         app.start();//start after setting up
     
 
