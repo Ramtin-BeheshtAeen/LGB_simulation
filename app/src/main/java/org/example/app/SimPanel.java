@@ -29,6 +29,9 @@ public class SimPanel extends JPanel{
 
     public SimPanel() {
 	add(makeParamsPanel());
+
+	setBackground(BG);
+	setPreferredSize(new Dimension(280, 900));
     }
 
     public JPanel makeParamsPanel() {

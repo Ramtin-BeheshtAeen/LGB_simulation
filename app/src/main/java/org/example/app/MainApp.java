@@ -17,6 +17,9 @@ import com.jme3.math.Vector3f;
 import com.jme3.system.AppSettings;
 import com.jme3.system.JmeCanvasContext;
 
+import javax.swing.*;
+import java.awt.*;
+
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import java.awt.BorderLayout;
@@ -29,7 +32,7 @@ public class MainApp {
 
     public static void main(String[] args) {
         //**!** */ 1. Start JavaFX toolkit first
-        Platform.startup(() -> {});
+       // Platform.startup(() -> {});
         LaserGuidance3D app = new LaserGuidance3D(); // Start THIS class
         
         //javaFX Panel Setting
@@ -40,23 +43,42 @@ public class MainApp {
         // Use Canvas mode to allow overlaying
         //createCanvas() + startCanvas() won't work with jme3-lwjgl3
         //app.createCanvas(); 
+	//
         //app.startCanvas();
 	
 	//-- Right Column: control Panel --------------------------------------
-	SimPanel panel = new SimPanel();
-	app.setPanel(panel);
-	panel.setBorder(new MatteBorder(0, 1, 0, 0, new color(45, 45, 58)));
+//	SimPanel panel = new SimPanel();
+ //	app.setPanel(panel);
+ //	panel.setBorder(new MatteBorder(0, 1, 0, 0, new color(45, 45, 58)));
 
 
-        app.start();//start after setting up
+        //app.start();//start after setting up
     
 
     // 3. Open JavaFX window separately
-    Platform.runLater(() -> {
-            Stage stage = new Stage();
-            Button btn = new Button("Launch");
-            stage.setScene(new Scene(new VBox(btn), 300, 600));
-            stage.show();
-        });
+ //     Platform.runLater(() -> {
+ //             Stage stage = new Stage();
+ //             Button btn = new Button("Launch");
+ //             stage.setScene(new Scene(new VBox(btn), 300, 600));
+ //             stage.show();
+ //         });
+ //     }
+	SwingUtilities.invokeLater( () -> {
+	    try {UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName()); }
+	    catch (Exception ignored) {}
+	    
+	    JFrame frame = new JFrame("Simulation");
+
+ 	    SimPanel panel = new SimPanel();
+ //            panel.setBorder(new MatteBorder(0, 1, 0, 0, new Color(45, 45, 58)));
+	    
+	    //app.setPanel(panel);
+	    frame.add(panel, BorderLayout.CENTER);
+	    frame.pack();
+	    frame.setLocationRelativeTo(null);
+	    frame.setVisible(true);
+	    new Thread(() -> app.start(), "jME-start").start();
+	});
     }
+
 }
