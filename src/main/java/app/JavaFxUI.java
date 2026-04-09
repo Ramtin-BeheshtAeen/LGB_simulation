@@ -1,4 +1,4 @@
-package org.example.app;
+package app;
 
 import com.jme3.app.SimpleApplication;
 import javafx.application.Platform;

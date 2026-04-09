@@ -1,4 +1,4 @@
-package org.example.app;
+package app;
 
 import javax.swing.JPanel;
 
