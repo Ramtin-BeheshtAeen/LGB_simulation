@@ -16,8 +16,6 @@ repositories {
 def javafxPlatform = org.gradle.internal.os.OperatingSystem.current().isWindows() ? 'win' : (org.gradle.internal.os.OperatingSystem.current().isMacOsX() ? 'mac' : 'linux')
 
 dependencies {
-    implementation project(':utilities')
-
     // jMonkeyEngine
     implementation 'org.jmonkeyengine:jme3-core:3.6.1-stable'
     implementation 'org.jmonkeyengine:jme3-desktop:3.6.1-stable'

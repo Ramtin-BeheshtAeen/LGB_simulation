@@ -20,7 +20,7 @@ plugins {
 }
 
 rootProject.name = 'java_missel_intercept'
-include('app', 'list', 'utilities')
+include('app')
 
 
 

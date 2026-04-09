@@ -1,30 +1,9 @@
-package org.example.app;
-
-import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.embed.swing.SwingNode;
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-
-import com.jme3.app.SimpleApplication;
-import com.jme3.app.StatsAppState;
-import com.jme3.math.Vector3f;
 import com.jme3.system.AppSettings;
-import com.jme3.system.JmeCanvasContext;
 
 import javax.swing.*;
-import java.awt.*;
 
-import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import java.awt.BorderLayout;
-import java.awt.Canvas;
-import java.awt.Dimension;
 
 
 // Change "SimpleApplication" to "LaserGuidance3D"

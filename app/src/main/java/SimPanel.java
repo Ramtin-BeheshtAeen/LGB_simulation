@@ -1,12 +1,7 @@
-package org.example.app;
-
 import javax.swing.JPanel;
 
 import javax.swing.*;
-import javax.swing.border.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.util.List;
 
 public class SimPanel extends JPanel{
     //Slider

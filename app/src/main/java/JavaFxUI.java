@@ -1,5 +1,3 @@
-package org.example.app;
-
 import com.jme3.app.SimpleApplication;
 import javafx.application.Platform;
 import javafx.scene.Group;
