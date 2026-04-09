@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:app/src/main/java/JavaFxUI.java
-========
 package app;
-
->>>>>>>> 4f3c6d4ee13f4bb39c406b11691898406733aa12:src/main/java/app/JavaFxUI.java
 import com.jme3.app.SimpleApplication;
 import javafx.application.Platform;
 import javafx.scene.Group;

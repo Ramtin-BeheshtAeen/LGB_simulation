@@ -1,22 +1,5 @@
-<<<<<<<< HEAD:app/src/main/java/MainApp.java
-========
 package app;
 
-import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.embed.swing.SwingNode;
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-
-import com.jme3.app.SimpleApplication;
-import com.jme3.app.StatsAppState;
-import com.jme3.math.Vector3f;
->>>>>>>> 4f3c6d4ee13f4bb39c406b11691898406733aa12:src/main/java/app/MainApp.java
 import com.jme3.system.AppSettings;
 
 import javax.swing.*;

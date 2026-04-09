@@ -19,7 +19,7 @@ public class Physics{
 
     /** Drag Force magnitude **/
     private double dragForce(double speed, double altitude){
-	double rho = airDenstiy(Math.max(0, altitude));
+	double rho = airDensity(Math.max(0, altitude));
 	return 0.5 * rho * dragCoeff * area * speed * speed;
     }
 

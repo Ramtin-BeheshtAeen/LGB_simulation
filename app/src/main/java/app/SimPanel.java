@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:app/src/main/java/SimPanel.java
-========
 package app;
-
->>>>>>>> 4f3c6d4ee13f4bb39c406b11691898406733aa12:src/main/java/app/SimPanel.java
 import javax.swing.JPanel;
 
 import javax.swing.*;
