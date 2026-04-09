@@ -24,7 +24,6 @@ dependencies {
     implementation("org.openjfx:javafx-base:25.0.1:${javafxPlatform}") { transitive = false }
     implementation("org.openjfx:javafx-graphics:25.0.1:${javafxPlatform}") { transitive = false }
     implementation("org.openjfx:javafx-controls:25.0.1:${javafxPlatform}") { transitive = false }
-    implementation("org.openjfx:javafx-graphics:25.0.1:${javafxPlatform}") { transitive = false }
     implementation("org.openjfx:javafx-fxml:25.0.1:${javafxPlatform}") { transitive = false }
     implementation("org.openjfx:javafx-swing:25.0.1:${javafxPlatform}") { transitive = false }
 
@@ -67,5 +66,5 @@ run {
 }
 
 application {
-    mainClass = 'org.example.app.MainApp'
+    mainClass = 'app.MainApp'
 }

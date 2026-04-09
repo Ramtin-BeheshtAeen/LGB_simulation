@@ -1,3 +1,8 @@
+<<<<<<<< HEAD:app/src/main/java/LaserGuidance3D.java
+========
+package app;
+
+>>>>>>>> 4f3c6d4ee13f4bb39c406b11691898406733aa12:src/main/java/app/LaserGuidance3D.java
 import com.jme3.app.SimpleApplication;
 import com.jme3.material.Material;
 import com.jme3.math.ColorRGBA;
