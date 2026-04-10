@@ -6,14 +6,16 @@ import javax.swing.*;
 
 import javax.swing.SwingUtilities;
 import java.awt.BorderLayout;
+import java.io.FileNotFoundException;
 
 
 // Change "SimpleApplication" to "LaserGuidance3D"
 public class MainApp { 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         LaserGuidance3D app = new LaserGuidance3D(); // Start THIS class
-        
+        RungeKatte r        = new RungeKatte();
+		r.solve();
         //javaFX Panel Setting
         AppSettings settings = new AppSettings(true);
         settings.setFrameRate(60);

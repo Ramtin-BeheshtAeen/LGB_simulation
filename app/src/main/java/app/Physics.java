@@ -1,3 +1,5 @@
+package app;
+
 public class Physics{
 
     public double mass        = 250.0;  // kg

@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d540d9b0-9a69-4e3b-9afe-b37789ebd5d8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/JavaFxUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/JavaFxUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/LaserGuidance3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/LaserGuidance3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/SimPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/SimPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/RungeKatte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Physics.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/Physics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PhysicsState.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/PhysicsState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/RungeKatte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/MainApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,31 +64,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build java_missel_intercept.executor": "Run",
-    "Gradle.java_missel_intercept [:app:app.MainApp.main()].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/veil/projects/java_missel_intercept",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build java_missel_intercept.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java_missel_intercept [:app:app.MainApp.main()].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/veil/projects/java_missel_intercept&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/java" />
@@ -125,6 +121,7 @@
     <configuration name="app.MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.MainApp" />
       <module name="java_missel_intercept.app.main" />
+      <option name="PROGRAM_PARAMETERS" value="--debug" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="app.*" />
@@ -144,6 +141,12 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.app.MainApp" />
+      <item itemvalue="Application.MainApp" />
+      <item itemvalue="Application.MainApp (1)" />
+      <item itemvalue="Gradle.Run Gradle :app:run" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.app.MainApp" />
@@ -159,7 +162,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1775738892861</updated>
-      <workItem from="1775738895335" duration="6964000" />
+      <workItem from="1775738895335" duration="11542000" />
     </task>
     <servers />
   </component>
@@ -177,11 +180,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/MainApp.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
